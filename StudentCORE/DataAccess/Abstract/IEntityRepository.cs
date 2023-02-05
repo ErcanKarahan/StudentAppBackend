@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StudentENTITIES;
 
-namespace StudentCORE.DataAccess
+namespace StudentCORE.DataAccess.Abstract
 {
 
     public interface IEntityRepository<T> where T : BaseEntity, new()
@@ -23,13 +23,13 @@ namespace StudentCORE.DataAccess
         void UpdateRange(List<T> item);
         void DeleteRange(List<T> item);
 
-        List<T> Where(Expression<Func<T, bool>> exp); //Filter ı where ile arayacak bool dönecek
+        List<T> Where(Expression<Func<T, bool>> exp); 
 
-        bool Any(Expression<Func<T, bool>> exp); //True yada false yanıt yönecek List değil
+        bool Any(Expression<Func<T, bool>> exp); 
 
-        T FirstOrDefault(Expression<Func<T, bool>> exp); // T  yani verdiği model tipinde deger dönecek
+        T FirstOrDefault(Expression<Func<T, bool>> exp); 
 
-        T Find(Guid id); //Metota id gönder sana modele dönecek
+        T Find(Guid id); 
 
     }
 }

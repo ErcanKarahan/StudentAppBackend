@@ -1,5 +1,4 @@
-﻿using StudentCORE.DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -8,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using StudentENTITIES;
+using StudentCORE.DataAccess.Abstract;
 
-namespace StudentCORE
+namespace StudentCORE.DataAccess.İConcrete
 {
     public abstract class EntityRepository<TEntity, TContext> : IEntityRepository<TEntity> where TEntity : BaseEntity, new() where TContext : DbContext, new()
     {
@@ -29,7 +29,7 @@ namespace StudentCORE
             {
                 await context.Set<TEntity>().AddAsync(item);
 
-                   context.SaveChanges();
+                context.SaveChanges();
             }
         }
 
@@ -140,4 +140,4 @@ namespace StudentCORE
 
     }
 }
- 
+

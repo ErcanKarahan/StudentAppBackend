@@ -1,4 +1,4 @@
-﻿using StudentCORE.DataAccess;
+﻿using StudentCORE.DataAccess.Abstract;
 using StudentENTITIES;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿using StudentCORE;
+﻿using StudentCORE.DataAccess.İConcrete;
 using StudentDAL.Context;
 using StudentDAL.Repository;
 using StudentENTITIES;
