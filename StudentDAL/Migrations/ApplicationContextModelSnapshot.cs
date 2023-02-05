@@ -52,6 +52,8 @@ namespace StudentDAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("TeacherId");
+
                     b.ToTable("Lessons");
                 });
 
@@ -123,6 +125,8 @@ namespace StudentDAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SchoolId");
+
                     b.ToTable("Students");
                 });
 
@@ -160,7 +164,52 @@ namespace StudentDAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SchoolId");
+
                     b.ToTable("Teachers");
+                });
+
+            modelBuilder.Entity("StudentENTITIES.Lesson", b =>
+                {
+                    b.HasOne("StudentENTITIES.Teacher", "techer")
+                        .WithMany("lessons")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("techer");
+                });
+
+            modelBuilder.Entity("StudentENTITIES.Student", b =>
+                {
+                    b.HasOne("StudentENTITIES.School", "schools")
+                        .WithMany("students")
+                        .HasForeignKey("SchoolId");
+
+                    b.Navigation("schools");
+                });
+
+            modelBuilder.Entity("StudentENTITIES.Teacher", b =>
+                {
+                    b.HasOne("StudentENTITIES.School", "school")
+                        .WithMany("teachers")
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("school");
+                });
+
+            modelBuilder.Entity("StudentENTITIES.School", b =>
+                {
+                    b.Navigation("students");
+
+                    b.Navigation("teachers");
+                });
+
+            modelBuilder.Entity("StudentENTITIES.Teacher", b =>
+                {
+                    b.Navigation("lessons");
                 });
 #pragma warning restore 612, 618
         }

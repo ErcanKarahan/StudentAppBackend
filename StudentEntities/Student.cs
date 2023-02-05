@@ -16,6 +16,11 @@ namespace StudentENTITIES
         public string? StudentNumber { get; set; }
         public string? Section { get; set; }
         public int? SchoolId { get; set; }
+
+
+        // Relational Properties
+
+        public virtual School schools { get; set; }
  
 
     }

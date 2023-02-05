@@ -13,7 +13,11 @@ namespace StudentENTITIES
         public int? Age { get; set; }
         public string? Section { get; set; }
         public int SchoolId { get; set; }
- 
+
+        //Relational Properties
+
+        public virtual List<Lesson> lessons { get; set; }
+        public virtual School school { get; set; }
         
     }
 }
