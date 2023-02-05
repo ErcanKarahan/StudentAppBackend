@@ -13,7 +13,7 @@ namespace StudentENTITIES
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
-        public ActiveType ActiveType { get; set; }
+        public ActiveType IsActive { get; set; }
 
         public BaseEntity()
         {
