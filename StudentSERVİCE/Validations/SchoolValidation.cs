@@ -12,7 +12,7 @@ namespace StudentSERVİCE.Validations
     {
         public SchoolValidation()
         {
-                
+            RuleFor(x => x.Name).NotEmpty();
         }
     }
 }

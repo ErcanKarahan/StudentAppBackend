@@ -15,6 +15,6 @@ namespace StudentSERVİCE.Validations
         {
                 RuleFor(x=> x.Name).NotEmpty(); 
         }
-        //Isim bişgeçilemez
+        
     }
 }

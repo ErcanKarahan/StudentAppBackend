@@ -13,7 +13,7 @@ namespace StudentSERVİCE.Validations
         public StudentValidation()
         {
             RuleFor(x => x.FirstName).MinimumLength(3);
-            RuleFor(x => x.LastName).NotEmpty().WithMessage("osman");
+            RuleFor(x => x.LastName).NotEmpty().WithMessage("Please enter your Lastname");
         }
         //Add new comments
     }

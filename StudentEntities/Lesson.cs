@@ -14,6 +14,6 @@ namespace StudentENTITIES
         public string Description { get; set; }
         public int TeacherId { get; set; }
 
-        public virtual Teacher techer { get; set; }
+        public virtual Teacher teacher { get; set; }
     }
 }
