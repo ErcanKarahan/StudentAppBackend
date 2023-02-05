@@ -16,35 +16,35 @@ namespace Stu_dentWeb_API.Controllers
             _schoolService = schoolService;
         }
 
-        [HttpGet("getbyid")]
+        [HttpGet("GetById")]
         public async Task<IActionResult> GetSchoolById(int id)
         {
             var response = await _schoolService.GetSchool(id);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpGet("getall")]
+        [HttpGet("GetAll")]
         public async Task<IActionResult> GetAllSchool()
         {
             var response = await _schoolService.GetAllSchool();
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPut]
+        [HttpPut("UpdateSchool")]
         public IActionResult UodateSchool(School school, int id)
         {
             var response = _schoolService.UpdateSchool(id, school);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpDelete]
+        [HttpDelete("DeleteSchool")]
         public IActionResult DeleteSchool(int id)
         {
             var response = _schoolService.DeleteSchool(id);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPost]
+        [HttpPost("AddSchool")]
         public IActionResult AddSchool(School school)
         {
             var response = _schoolService.AddSchool(school);

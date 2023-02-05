@@ -14,35 +14,35 @@ namespace Stu_dentWeb_API.Controllers
         {
             _lessonService=lessonService;
         }
-        [HttpGet("getbyid")]
+        [HttpGet("GetById")]
         public async Task<IActionResult> GetLessonById(int id)
         {
             var response = await _lessonService.GetLesson(id);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpGet("getall")]
-        public async Task<IActionResult> GetAllSchool()
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAllLessonl()
         {
             var response = await _lessonService.GetAllLesson();
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPut]
-        public IActionResult UodateSchool(Lesson lesson, int id)
+        [HttpPut("UpdateLesson")]
+        public IActionResult UodateLesson(Lesson lesson, int id)
         {
             var response = _lessonService.UpdateLesson(id, lesson);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpDelete]
-        public IActionResult DeleteSchool(int id)
+        [HttpDelete("DeleteLesson")]
+        public IActionResult DeleteLesson(int id)
         {
             var response = _lessonService.DeleteLesson(id);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPost]
+        [HttpPost("UpdateLesson")]
         public IActionResult AddLesson(Lesson lesson)
         {
             var response = _lessonService.AddLesson(lesson);

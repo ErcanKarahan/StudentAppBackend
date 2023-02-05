@@ -16,49 +16,49 @@ namespace Stu_dentWeb_API.Controllers
             _studentService = studentService;
         }
 
-        [HttpGet("getbyid")]
+        [HttpGet("GetById")]
         public async Task<IActionResult> GetStudentById(int id)
         {
             var response = await _studentService.GetStudent(id);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpGet("getall")]
+        [HttpGet("GetAll")]
         public async Task<IActionResult> GetAllStudent()
         {
             var response = await _studentService.GetAllStudent();
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPost]
+        [HttpPost("AddStudent")]
         public IActionResult AddStudent(Student student)
         {
             var response = _studentService.AddStudent(student);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPut]
+        [HttpPut("UpdateStudent")]
         public IActionResult UpdateStudent(Student student,int id)
         {
             var response = _studentService.UpdateStudent(id,student);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpDelete]
+        [HttpDelete("DeleteStudent")]
         public IActionResult DeleteStudent( int id)
         {
             var response = _studentService.DeleteStudent(id);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPut("getIsActive")]
+        [HttpPut("GetIsActive")]
         public IActionResult UpdateStudentIsActive(int id,ActiveType type)
         {
             var response = _studentService.UpdateStudenById(id,type);
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpGet("getActiveTypeList")]
+        [HttpGet("GetActiveTypeList")]
         public IActionResult UpdateStudentIsActive(ActiveType type)
         {
             var response = _studentService.GetAllActiveTypeStudents(type);
