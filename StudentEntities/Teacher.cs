@@ -16,8 +16,8 @@ namespace StudentENTITIES
 
         //Relational Properties
 
-        public virtual List<Lesson> lessons { get; set; }
-        public virtual School school { get; set; }
+        //public virtual List<Lesson> lessons { get; set; }
+        //public virtual School school { get; set; }
         
     }
 }

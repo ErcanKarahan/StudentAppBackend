@@ -20,7 +20,7 @@ namespace StudentENTITIES
 
         // Relational Properties
 
-        public virtual School schools { get; set; }
+        //public virtual School schools { get; set; }
  
 
     }

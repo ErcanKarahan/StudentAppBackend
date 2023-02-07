@@ -12,7 +12,7 @@ namespace StudentDAL.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server = ADMIN\SQLEXPRESS; database = StudentApp; 
+            optionsBuilder.UseSqlServer(@"Server = ADMIN\SQLEXPRESS; database = StudentAppsDB; 
 Trusted_Connection = True; TrustServerCertificate=True; Connect Timeout = 30; MultipleActiveResultSets = True");
         }
 

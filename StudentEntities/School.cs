@@ -16,7 +16,7 @@ namespace StudentENTITIES
 
         // Relational Properties
 
-        public virtual List<Student> students { get; set; }
-        public virtual List<Teacher> teachers { get; set; }
+        //public virtual List<Student> students { get; set; }
+        //public virtual List<Teacher> teachers { get; set; }
     }
 }
