@@ -22,7 +22,7 @@ namespace Stu_dentWeb_API.Controllers
             return Ok(response);
         }
         [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAllLessonl()
+        public async Task<IActionResult> GetAllLesson()
         {
             var response = await _lessonService.GetAllLesson();
             if (response == null) return BadRequest();
@@ -42,7 +42,7 @@ namespace Stu_dentWeb_API.Controllers
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPost("UpdateLesson")]
+        [HttpPost("Lesson")]
         public IActionResult AddLesson(Lesson lesson)
         {
             var response = _lessonService.AddLesson(lesson);
