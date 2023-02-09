@@ -67,7 +67,9 @@ namespace StudentSERVİCE.Services
             var response = _studentRepository.Get(x => x.Id == id);
             if (response != null)
             {
-                _studentRepository.UpdateAsync(response);
+
+                student.Id = response.Id;
+                _studentRepository.UpdateAsync(student);
                 return new Response<bool>() { Succeeded = true };
             }
 
