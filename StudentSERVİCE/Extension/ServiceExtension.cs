@@ -14,7 +14,7 @@ namespace StudentSERVİCE.Extension
 {
     public static class ServiceExtension
     {
-        public static IServiceCollection AddRegistration(this IServiceCollection services)
+        public static IServiceCollection AddRegistration(this  IServiceCollection services)
         {
             services.AddScoped<ISchoolRepository, SchoolRepository>();
             services.AddScoped<ILessonRepository, LessonRepository>();
