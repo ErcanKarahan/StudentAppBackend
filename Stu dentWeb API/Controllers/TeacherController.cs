@@ -7,11 +7,11 @@ namespace Stu_dentWeb_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TeacherControler : ControllerBase
+    public class TeacherController : ControllerBase
     {
         private readonly ITeacherService _teacherService;
 
-        public TeacherControler(ITeacherService teacherService)
+        public TeacherController(ITeacherService teacherService)
         {
             _teacherService = teacherService;
         }

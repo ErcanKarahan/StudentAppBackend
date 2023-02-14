@@ -34,16 +34,5 @@ namespace Stu_dentWeb_API.Filters
         }
     }
 }
-//Bu kod, ASP.NET Core uygulamalarında geçerlilik kontrolü için bir asenkron aksiyon filtresi olarak uygulanmak üzere tasarlanmış bir .NET Core sınıfıdır. Kod aşağıdaki görevleri yerine getirir:
 
-//    ModelState'in geçerli olup olmadığını kontrol eder. ModelState ActionExecutingContext nesnesinin bir özelliğidir ve uygulamanın girdi verilerinin geçerli olup olmadığını belirler.
-
-//    Eğer ModelState geçerli değilse, ModelState içindeki hata mesajlarının listesi ValidationException isimli bir nesnede toplanır.
-
-//    Her bir hata mesajı, errorReponse.Errors listesine eklenir.
-
-//    context.Result nesnesi, BadRequestObjectResult isimli bir nesne ile güncellenir ve hataları içeren errorReponse nesnesi ile birlikte döndürülür.
-
-//    Bu kod, uygulamanın girdi verilerinin geçerlilik kontrolünü yapmasına ve uygun bir şekilde yanıt vermesine olanak tanır.
-//}
 

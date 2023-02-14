@@ -17,8 +17,4 @@
     <ProjectReference Include="..\StudentDAL\StudentDAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Middleware\" />
-  </ItemGroup>
-
 </Project>

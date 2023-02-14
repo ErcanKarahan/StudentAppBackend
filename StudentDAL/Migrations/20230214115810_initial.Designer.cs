@@ -12,8 +12,8 @@ using StudentDAL.Context;
 namespace StudentDAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20230209164729_init")]
-    partial class init
+    [Migration("20230214115810_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

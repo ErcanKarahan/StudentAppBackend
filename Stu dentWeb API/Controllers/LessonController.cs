@@ -42,7 +42,7 @@ namespace Stu_dentWeb_API.Controllers
             if (response == null) return BadRequest();
             return Ok(response);
         }
-        [HttpPost("Lesson")]
+        [HttpPost("AddLesson")]
         public IActionResult AddLesson(Lesson lesson)
         {
             var response = _lessonService.AddLesson(lesson);
